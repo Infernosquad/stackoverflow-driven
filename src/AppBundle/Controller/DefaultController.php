@@ -12,6 +12,8 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('default/index.html.twig');
+        $users = $this->getDoctrine()->getRepository('AppBundle:User')->findAll();
+
+        return $this->render('AppBundle:Default:index.html.twig',array('users' => $users));
     }
 }
