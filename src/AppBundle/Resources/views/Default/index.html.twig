@@ -1,3 +1,30 @@
-{% for user in users %}
-    {{ user.id }}: {{ user.name }}
-{% endfor %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script>
+        $(function(){
+            $( "form" ).on( "submit", function( event ) {
+                event.preventDefault();
+                var submit = {};
+                $(this).serializeArray().map(function(x){submit[x.name] = x.value;});
+                $.ajax({
+                    type: "POST",
+                    url: '/users',
+                    data: submit,
+                    success: function(data){
+                        console.log(data);
+                        console.log(submit);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <form method="post" action=""><div id="users"><div><label for="users_name" class="required">Name</label><input type="text" id="users_name" name="users[name]" required="required"></div><div><label for="users_firstName" class="required">First name</label><input type="text" id="users_firstName" name="users[first_name]" required="required"></div><div><button type="submit" id="users_submit" name="users[submit]">Submit</button></div></div></form>
+</body>
+</html>
+

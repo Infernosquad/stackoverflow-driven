@@ -19,6 +19,11 @@ class User
      */
     private $name;
 
+    /**
+     * @var string
+     */
+    private $firstName;
+
 
     /**
      * Get id
@@ -44,5 +49,21 @@ class User
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * @param string $firstName
+     */
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
     }
 }
