@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "918ffb46105648069b66716ac08c5b05",
+    "hash": "862c2cbe2ca7915492b7538c7db34c64",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -405,16 +405,16 @@
         },
         {
             "name": "doctrine/doctrine-bundle",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "1986ff3a945b584c6505d07eae92d77e41131078"
+                "reference": "0b9e27037c4fdbad515ee5ec89842e9091a6480f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/1986ff3a945b584c6505d07eae92d77e41131078",
-                "reference": "1986ff3a945b584c6505d07eae92d77e41131078",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/0b9e27037c4fdbad515ee5ec89842e9091a6480f",
+                "reference": "0b9e27037c4fdbad515ee5ec89842e9091a6480f",
                 "shasum": ""
             },
             "require": {
@@ -422,6 +422,7 @@
                 "doctrine/doctrine-cache-bundle": "~1.0",
                 "jdorn/sql-formatter": "~1.1",
                 "php": ">=5.3.2",
+                "symfony/console": "~2.3",
                 "symfony/doctrine-bridge": "~2.2",
                 "symfony/framework-bundle": "~2.3"
             },
@@ -440,7 +441,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4.x-dev"
+                    "dev-master": "1.5.x-dev"
                 }
             },
             "autoload": {
@@ -478,7 +479,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2015-02-28 11:04:45"
+            "time": "2015-05-28 12:27:15"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -819,6 +820,73 @@
             "time": "2014-12-16 13:45:01"
         },
         {
+            "name": "friendsofsymfony/user-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
+                "reference": "92d5624f2a29e74d8fd9d2a94d7ed7998a8c2809"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/92d5624f2a29e74d8fd9d2a94d7ed7998a8c2809",
+                "reference": "92d5624f2a29e74d8fd9d2a94d7ed7998a8c2809",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/security-bundle": "~2.3",
+                "symfony/twig-bundle": "~2.3"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "~1.3",
+                "swiftmailer/swiftmailer": "~4.3|~5",
+                "symfony/validator": "~2.3",
+                "symfony/yaml": "~2.3",
+                "willdurand/propel-typehintable-behavior": "~1.0"
+            },
+            "suggest": {
+                "willdurand/propel-typehintable-behavior": "Needed when using the propel implementation"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FOS\\UserBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                },
+                {
+                    "name": "FriendsOfSymfony Community",
+                    "homepage": "https://github.com/friendsofsymfony/FOSUserBundle/contributors"
+                },
+                {
+                    "name": "Thibault Duplessis",
+                    "email": "thibault.duplessis@gmail.com"
+                }
+            ],
+            "description": "Symfony FOSUserBundle",
+            "homepage": "http://friendsofsymfony.github.com",
+            "keywords": [
+                "User management"
+            ],
+            "time": "2015-05-05 15:08:24"
+        },
+        {
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.1.0",
             "target-dir": "Incenteev/ParameterHandler",
@@ -921,6 +989,125 @@
             "time": "2014-01-12 16:20:24"
         },
         {
+            "name": "knplabs/knp-snappy",
+            "version": "0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/snappy.git",
+                "reference": "f29edc4e53429deec2b394926a8f743a0ad2e28e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/snappy/zipball/f29edc4e53429deec2b394926a8f743a0ad2e28e",
+                "reference": "f29edc4e53429deec2b394926a8f743a0ad2e28e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "symfony/process": "~2.1"
+            },
+            "suggest": {
+                "h4cc/wkhtmltopdf-amd64": "Provide wkhtmltopdf-amd64 binary, use version `0.12.0` as dependency",
+                "h4cc/wkhtmltopdf-i386": "Provide wkhtmltopdf-i386 binary, use version `0.12.0` as dependency"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Snappy": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://github.com/KnpLabs/snappy/contributors"
+                }
+            ],
+            "description": "PHP5 library allowing thumbnail, snapshot or PDF generation from a url or a html page. Wrapper for wkhtmltopdf/wkhtmltoimage.",
+            "homepage": "http://github.com/KnpLabs/snappy",
+            "keywords": [
+                "knp",
+                "knplabs",
+                "pdf",
+                "snapshot",
+                "thumbnail",
+                "wkhtmltopdf"
+            ],
+            "time": "2015-05-07 07:43:07"
+        },
+        {
+            "name": "knplabs/knp-snappy-bundle",
+            "version": "dev-master",
+            "target-dir": "Knp/Bundle/SnappyBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpSnappyBundle.git",
+                "reference": "e68e893787ab7c07105f042247750875b3154239"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpSnappyBundle/zipball/e68e893787ab7c07105f042247750875b3154239",
+                "reference": "e68e893787ab7c07105f042247750875b3154239",
+                "shasum": ""
+            },
+            "require": {
+                "knplabs/knp-snappy": "*",
+                "php": ">=5.3.2",
+                "symfony/finder": ">=2.0.0",
+                "symfony/framework-bundle": ">=2.0.0",
+                "symfony/validator": ">=2.0.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Bundle\\SnappyBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://github.com/KnpLabs/KnpSnappyBundle/contributors"
+                }
+            ],
+            "description": "Easily create PDF and images in Symfony2 by converting Twig/HTML templates.",
+            "homepage": "http://github.com/KnpLabs/KnpSnappyBundle",
+            "keywords": [
+                "bundle",
+                "knp",
+                "knplabs",
+                "pdf",
+                "snappy"
+            ],
+            "time": "2015-05-05 11:14:34"
+        },
+        {
             "name": "kriswallsmith/assetic",
             "version": "v1.2.1",
             "source": {
@@ -993,6 +1180,65 @@
                 "minification"
             ],
             "time": "2014-12-12 05:04:05"
+        },
+        {
+            "name": "mesd/jasper-client",
+            "version": "v1.0.2",
+            "target-dir": "JasperClient",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MESD/JasperClient.git",
+                "reference": "f2e9dc94dc76f0195f328ecf8afd1f342c0d1ab1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MESD/JasperClient/zipball/f2e9dc94dc76f0195f328ecf8afd1f342c0d1ab1",
+                "reference": "f2e9dc94dc76f0195f328ecf8afd1f342c0d1ab1",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JasperClient": "JasperClient/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Jasper Client",
+            "time": "2014-11-21 00:24:52"
+        },
+        {
+            "name": "mesd/jasper-report-bundle",
+            "version": "v1.0.7",
+            "target-dir": "Mesd/Jasper/ReportBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MESD/JasperReportBundle.git",
+                "reference": "96d4d2b66021672118dd3205927ef2accb57dc69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MESD/JasperReportBundle/zipball/96d4d2b66021672118dd3205927ef2accb57dc69",
+                "reference": "96d4d2b66021672118dd3205927ef2accb57dc69",
+                "shasum": ""
+            },
+            "require": {
+                "mesd/jasper-client": "~1.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Mesd\\Jasper\\ReportBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Jasper Reports bundle",
+            "time": "2015-03-09 17:50:11"
         },
         {
             "name": "monolog/monolog",
@@ -1596,6 +1842,69 @@
             "time": "2015-05-26 21:55:27"
         },
         {
+            "name": "tecnick.com/tcpdf",
+            "version": "6.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tecnickcom/TCPDF.git",
+                "reference": "3dee9e7f3a414875fd1d9f4f1dfc2433493a86d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/3dee9e7f3a414875fd1d9f4f1dfc2433493a86d2",
+                "reference": "3dee9e7f3a414875fd1d9f4f1dfc2433493a86d2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "fonts",
+                    "config",
+                    "include",
+                    "tcpdf.php",
+                    "tcpdf_parser.php",
+                    "tcpdf_import.php",
+                    "tcpdf_barcodes_1d.php",
+                    "tcpdf_barcodes_2d.php",
+                    "include/tcpdf_colors.php",
+                    "include/tcpdf_filters.php",
+                    "include/tcpdf_font_data.php",
+                    "include/tcpdf_fonts.php",
+                    "include/tcpdf_images.php",
+                    "include/tcpdf_static.php",
+                    "include/barcodes/datamatrix.php",
+                    "include/barcodes/pdf417.php",
+                    "include/barcodes/qrcode.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPLv3"
+            ],
+            "authors": [
+                {
+                    "name": "Nicola Asuni",
+                    "email": "info@tecnick.com",
+                    "homepage": "http://nicolaasuni.tecnick.com"
+                }
+            ],
+            "description": "TCPDF is a PHP class for generating PDF documents and barcodes.",
+            "homepage": "http://www.tcpdf.org/",
+            "keywords": [
+                "PDFD32000-2008",
+                "TCPDF",
+                "barcodes",
+                "datamatrix",
+                "pdf",
+                "pdf417",
+                "qrcode"
+            ],
+            "time": "2015-04-29 16:13:58"
+        },
+        {
             "name": "twig/extensions",
             "version": "v1.0.1",
             "source": {
@@ -1698,12 +2007,289 @@
                 "templating"
             ],
             "time": "2015-04-19 08:30:27"
+        },
+        {
+            "name": "whiteoctober/tcpdf-bundle",
+            "version": "1.0.1",
+            "target-dir": "WhiteOctober/TCPDFBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteoctober/WhiteOctoberTCPDFBundle.git",
+                "reference": "349a327c34afce6c1a9e6e5fbbdad431a66b416e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberTCPDFBundle/zipball/349a327c34afce6c1a9e6e5fbbdad431a66b416e",
+                "reference": "349a327c34afce6c1a9e6e5fbbdad431a66b416e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": ">=2.0",
+                "tecnick.com/tcpdf": "*"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "WhiteOctober\\TCPDFBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rich Sage",
+                    "email": "rich.sage@gmail.com"
+                }
+            ],
+            "description": "A bundle to easily integrate TCPDF into Symfony2",
+            "homepage": "https://github.com/whiteoctober/WhiteOctoberTCPDFBundle",
+            "keywords": [
+                "TCPDF",
+                "pdf"
+            ],
+            "time": "2014-05-27 11:08:33"
+        },
+        {
+            "name": "widop/google-analytics",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/widop/google-analytics.git",
+                "reference": "b8c7f0d15dab31e94350c35f2a3dc1cf6aab4ac9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/widop/google-analytics/zipball/b8c7f0d15dab31e94350c35f2a3dc1cf6aab4ac9",
+                "reference": "b8c7f0d15dab31e94350c35f2a3dc1cf6aab4ac9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "widop/http-adapter": "1.0.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Widop\\GoogleAnalytics": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric GELOEN",
+                    "email": "geloen.eric@gmail.com"
+                },
+                {
+                    "name": "Widop",
+                    "email": "contact@widop.com"
+                }
+            ],
+            "description": "Google certificate-based authentication in server-to-server interactions with google analytics",
+            "keywords": [
+                "analytics",
+                "google",
+                "server"
+            ],
+            "time": "2013-09-22 11:44:02"
+        },
+        {
+            "name": "widop/google-analytics-bundle",
+            "version": "1.1.0",
+            "target-dir": "Widop/GoogleAnalyticsBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/widop/WidopGoogleAnalyticsBundle.git",
+                "reference": "feec9394877c2408b747aad33409366067deb76c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/widop/WidopGoogleAnalyticsBundle/zipball/feec9394877c2408b747aad33409366067deb76c",
+                "reference": "feec9394877c2408b747aad33409366067deb76c",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/framework-bundle": "2.*",
+                "widop/google-analytics": "1.0.*",
+                "widop/http-adapter-bundle": "1.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Widop\\GoogleAnalyticsBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric GELOEN",
+                    "email": "geloen.eric@gmail.com"
+                },
+                {
+                    "name": "Widop",
+                    "email": "contact@widop.com"
+                }
+            ],
+            "description": "Google certificate-based authentication in server-to-server interactions with google analytics",
+            "keywords": [
+                "analytics",
+                "google",
+                "server"
+            ],
+            "time": "2013-09-22 12:12:43"
+        },
+        {
+            "name": "widop/http-adapter",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/widop/http-adapter.git",
+                "reference": "0a30815a70de92e24d9c08af4494730a25cad5d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/widop/http-adapter/zipball/0a30815a70de92e24d9c08af4494730a25cad5d2",
+                "reference": "0a30815a70de92e24d9c08af4494730a25cad5d2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "guzzle/guzzle": "*",
+                "kriswallsmith/buzz": "*",
+                "phpunit/phpunit": "3.7.*",
+                "zendframework/zend-http": "*"
+            },
+            "suggest": {
+                "ext-curl": "Allows you to use cURL adapter",
+                "guzzle/guzzle": "Allows you to use Guzzle adapter",
+                "kriswallsmith/buzz": "Allows you to use Buzz adapter",
+                "zendframework/zend-http": "Allows you to use Zend adapter"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Widop\\HttpAdapter": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric GELOEN",
+                    "email": "geloen.eric@gmail.com"
+                },
+                {
+                    "name": "Widop",
+                    "email": "contact@widop.com"
+                }
+            ],
+            "description": "Issue HTTP request.",
+            "keywords": [
+                "http",
+                "request"
+            ],
+            "time": "2013-10-30 15:38:45"
+        },
+        {
+            "name": "widop/http-adapter-bundle",
+            "version": "1.1.1",
+            "target-dir": "Widop/HttpAdapterBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/widop/WidopHttpAdapterBundle.git",
+                "reference": "77d00ada2736b815be1719fc0320f1858bf5fbe0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/widop/WidopHttpAdapterBundle/zipball/77d00ada2736b815be1719fc0320f1858bf5fbe0",
+                "reference": "77d00ada2736b815be1719fc0320f1858bf5fbe0",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/framework-bundle": "2.*",
+                "widop/http-adapter": ">=1.0.2"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "guzzle/guzzle": "*",
+                "kriswallsmith/buzz": "*",
+                "phpunit/phpunit": "3.7.*",
+                "zendframework/zend-http": "*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Widop\\HttpAdapterBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric GELOEN",
+                    "email": "geloen.eric@gmail.com"
+                },
+                {
+                    "name": "Widop",
+                    "email": "contact@widop.com"
+                }
+            ],
+            "description": "Issue HTTP request.",
+            "keywords": [
+                "http",
+                "request"
+            ],
+            "time": "2013-10-30 19:43:10"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "friendsofsymfony/user-bundle": 20,
+        "knplabs/knp-snappy-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -20,7 +20,12 @@
         "sensio/framework-extra-bundle": "~3.0,>=3.0.2",
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
-        "doctrine/doctrine-fixtures-bundle": "2.2.*"
+        "doctrine/doctrine-fixtures-bundle": "2.2.*",
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "widop/google-analytics-bundle": "*",
+        "whiteoctober/tcpdf-bundle": "*",
+        "knplabs/knp-snappy-bundle": "dev-master",
+        "mesd/jasper-report-bundle": "~1.0"
     },
     "scripts": {
         "post-install-cmd": [
