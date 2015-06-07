@@ -19,6 +19,11 @@ class User
      */
     private $name;
 
+    /**
+     * @var \DateTime
+     */
+    protected $birthday;
+
 
     /**
      * Get id
@@ -44,5 +49,21 @@ class User
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBirthday()
+    {
+        return $this->birthday;
+    }
+
+    /**
+     * @param mixed $birthday
+     */
+    public function setBirthday($birthday)
+    {
+        $this->birthday = $birthday;
     }
 }

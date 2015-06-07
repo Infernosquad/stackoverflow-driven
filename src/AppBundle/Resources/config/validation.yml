@@ -1,0 +1,4 @@
+AppBundle\Entity\User:
+    properties:
+       birthday:
+            - Date: { message: "Changed message" }

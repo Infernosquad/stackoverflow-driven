@@ -11,4 +11,7 @@ AppBundle\Entity\User:
     fields:
        name:
          type: string
+       birthday:
+         type: datetime
+         columnDefinition: TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     lifecycleCallbacks: {  }

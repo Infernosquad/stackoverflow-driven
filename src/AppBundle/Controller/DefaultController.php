@@ -21,8 +21,7 @@ class DefaultController extends Controller
 
         $form->handleRequest($request);
 
-        if($request->isMethod('POST'))
-        {
+        if($form->isValid()){
             $em = $this->getDoctrine()->getManager();
 
             $em->persist($form->getData());
@@ -30,6 +29,7 @@ class DefaultController extends Controller
 
             return $this->redirectToRoute('homepage');
         }
+
 
         return $this->render('AppBundle:Default:index.html.twig', array(
                 'users' => $users,
