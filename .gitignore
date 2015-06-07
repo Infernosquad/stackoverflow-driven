@@ -5,6 +5,8 @@
 /app/data/*
 /app/config/parameters.yml
 /app/logs/*
+/app/data/
+/web/uploads/
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 /build/
