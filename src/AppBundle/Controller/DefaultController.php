@@ -21,6 +21,7 @@ class DefaultController extends Controller
 
         $form->handleRequest($request);
 
+        var_dump($request->getClientIp());
         if($request->isMethod('POST'))
         {
             $em = $this->getDoctrine()->getManager();

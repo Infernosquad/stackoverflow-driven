@@ -1,3 +1,6 @@
 services:
-  my.service:
-    class: AppBundle\Entity
+   app.routing_loader:
+       class: AppBundle\Routing\AdvancedLoader
+       arguments: [@request=]
+       tags:
+           - { name: routing.loader }
