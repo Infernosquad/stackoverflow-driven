@@ -21,14 +21,14 @@ class DefaultController extends Controller
 
         $form->handleRequest($request);
 
-        if($request->isMethod('POST'))
+        if($form->isValid())
         {
             $em = $this->getDoctrine()->getManager();
 
             $em->persist($form->getData());
             $em->flush();
 
-            return $this->redirectToRoute('homepage');
+            return $this->redirect($this->generateUrl('homepage'));
         }
 
         return $this->render('AppBundle:Default:index.html.twig', array(

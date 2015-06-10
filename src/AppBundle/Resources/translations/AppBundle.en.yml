@@ -1,0 +1,2 @@
+validation:
+    not_blank: "Not blank custom"
