@@ -59,5 +59,10 @@ sensio_framework_extra:
 fos_rest:
     routing_loader:
         default_format: json
+
     view:
         view_response_listener: force
+        exception_wrapper_handler: AppBundle\Handler\MyExceptionWrapperHandler
+
+    exception:
+          enabled:              true
