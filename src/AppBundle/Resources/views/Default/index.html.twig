@@ -1,7 +1,17 @@
 {% trans_default_domain "AppBundle" %}
+
 {{ 'validation.not_blank'|trans }}
+
+{% stylesheets  "@AppBundle/Resources/assets/css/main.sass" filter="sass"%}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
 {{ form(form) }}
 
 {% for user in users %}
     {{ user.id }}: {{ user.name }}
 {% endfor %}
+
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, repellat?
+</p>

@@ -30,9 +30,10 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    bundles:        [AppBundle]
     filters:
         cssrewrite: ~
+        sass: ~
 
 # Doctrine Configuration
 doctrine:
