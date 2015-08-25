@@ -4,6 +4,8 @@ namespace ContentBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * @ORM\Entity
  */
@@ -17,7 +19,8 @@ class Post
     protected $id;
 
     /**
-     * @ORM\Column(type="string")
+     * @Assert\Choice(callback = "getConditions")
+     * @ORM\Column(type="string",length=10)
      */
     protected $title;
 
@@ -51,6 +54,22 @@ class Post
     public function setTitle($title)
     {
         $this->title = $title;
+    }
+
+    public static function getConditions()
+    {
+        return array(
+            0 => 'new',
+            1 => 'used'
+        );
+    }
+    public static function getConditions1()
+    {
+        return array(
+            '0'  => 'new',
+            '1' => 'used',
+            '2' => 'sed'
+        );
     }
 
 }
