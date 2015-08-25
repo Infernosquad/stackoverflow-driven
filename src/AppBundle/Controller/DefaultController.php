@@ -24,7 +24,7 @@ class DefaultController extends Controller
             $em->persist($form->getData());
             $em->flush();
 
-            return $this->redirect($this->generateUrl('homepage'));
+            return $this->redirect($this->generateUrl('index'));
         }
 
         return $this->render('AppBundle:Default:index.html.twig', array(

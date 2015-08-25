@@ -14,11 +14,9 @@ class UserType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('name','text',array(
-            'label' => 'validation.not_blank',
-            'constraints' => new Length(array(
-                'max' => 3
-            ))
+            'label' => 'Add User',
         ));
+
         $builder->add('submit','submit');
     }
 

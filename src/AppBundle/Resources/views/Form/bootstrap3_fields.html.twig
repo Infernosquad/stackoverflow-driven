@@ -1,0 +1,8 @@
+{% use "form_div_layout.html.twig" %}
+
+{% block form_widget_simple -%}
+    {% if type is not defined or 'file' != type %}
+        {%- set attr = attr|merge({class: (attr.class|default('') ~ ' form-control')|trim}) -%}
+    {% endif %}
+    {{- parent() -}}
+{%- endblock form_widget_simple %}

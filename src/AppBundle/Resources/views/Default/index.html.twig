@@ -1,7 +1,37 @@
-{% trans_default_domain "AppBundle" %}
-{{ 'validation.not_blank'|trans }}
-{{ form(form) }}
+{% extends 'AppBundle::layout.html.twig' %}
 
-{% for user in users %}
-    {{ user.id }}: {{ user.name }}
-{% endfor %}
+{% trans_default_domain "AppBundle" %}
+
+{% form_theme form 'AppBundle:Form:bootstrap3_fields.html.twig' %}
+
+{% block body %}
+    {{ form_start(form) }}
+
+        {{ form_widget(form.name,{'attr':{'placeholder':'Add User'}}) }}
+
+        {{ form_widget(form.submit,{'attr':{'class':'btn btn-primary btn-block'}}) }}
+
+        {{ form_rest(form) }}
+    {{ form_end(form) }}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>
+                        {{ user.id }}
+                    </td>
+                    <td>
+                        {{ user.name }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
