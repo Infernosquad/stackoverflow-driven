@@ -1,3 +1,11 @@
 services:
-  my.service:
-    class: AppBundle\Entity
+    app.admin.user:
+        class: AppBundle\Admin\UserAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Security", label: "Users" }
+        arguments:
+            - ~
+            - AppBundle\Entity\User
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppBundle]]
