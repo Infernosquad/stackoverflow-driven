@@ -136,7 +136,7 @@ class User implements UserInterface, \Serializable
      */
     public function getUsername()
     {
-        return $this->getUsername();
+        return $this->getName();
     }
 
     public function eraseCredentials()
