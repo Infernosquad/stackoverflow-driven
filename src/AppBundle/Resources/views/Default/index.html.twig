@@ -5,33 +5,13 @@
 {% form_theme form 'AppBundle:Form:bootstrap3_fields.html.twig' %}
 
 {% block body %}
-    {{ form_start(form) }}
-
-        {{ form_widget(form.name,{'attr':{'placeholder':'Add User'}}) }}
-
-        {{ form_widget(form.submit,{'attr':{'class':'btn btn-primary btn-block'}}) }}
-
-        {{ form_rest(form) }}
-    {{ form_end(form) }}
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Username</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for user in users %}
-                <tr>
-                    <td>
-                        {{ user.id }}
-                    </td>
-                    <td>
-                        {{ user.name }}
-                    </td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <div class="jumbotron">
+        <h1>Hello!</h1>
+        <p>This site is for testing purposes.</p>
+        <p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">
+                Learn more
+            </a>
+        </p>
+    </div>
 {% endblock %}

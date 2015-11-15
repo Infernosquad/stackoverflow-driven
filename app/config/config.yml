@@ -1,7 +1,10 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+
     - { resource: sonata/sonata_block.yml }
+
+    - { resource: custom/hwioauth.yml }
 
 framework:
     #esi:             ~
