@@ -5,3 +5,10 @@ users:
 index:
     path:      /
     defaults:  { _controller: AppBundle:Default:index }
+
+login:
+    path:     /login
+    defaults: { _controller: AppBundle:Security:login }
+
+login_check:
+    path: /login_check

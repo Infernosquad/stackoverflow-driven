@@ -11,6 +11,8 @@ AppBundle\Entity\User:
     fields:
        name:
          type: string
+       password:
+         type: string
        createdAt:
          type: datetime
     lifecycleCallbacks: {  }
