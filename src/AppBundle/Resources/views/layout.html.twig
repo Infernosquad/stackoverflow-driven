@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <title>Symfony2 StackOverflow Edition</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        {% block stylesheets %}{% endblock %}
         <link rel="stylesheet" href="{{ asset('/bundles/app/css/main.css') }}">
+        {% block javascripts %}{% endblock %}
     </head>
     <body>
         <nav class="navbar navbar-default">

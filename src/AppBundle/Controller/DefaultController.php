@@ -33,4 +33,9 @@ class DefaultController extends Controller
             )
         );
     }
+
+    public function angularAction()
+    {
+        return $this->render('AppBundle:Default:angular.html.twig');
+    }
 }
