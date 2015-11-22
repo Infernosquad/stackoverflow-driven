@@ -5,6 +5,7 @@ imports:
     - { resource: sonata/sonata_block.yml }
 
     - { resource: custom/hwioauth.yml }
+    - { resource: custom/fos_rest.yml }
 
 framework:
     #esi:             ~
@@ -59,9 +60,3 @@ swiftmailer:
 
 sensio_framework_extra:
     view:    { annotations: false }
-
-fos_rest:
-    routing_loader:
-        default_format: json
-    view:
-        view_response_listener: force
