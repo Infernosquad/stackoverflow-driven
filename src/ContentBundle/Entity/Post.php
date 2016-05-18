@@ -2,6 +2,7 @@
 
 namespace ContentBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -20,6 +21,16 @@ class Post
      * @ORM\Column(type="string")
      */
     protected $title;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Tag",inversedBy="tags",cascade={"persist", "remove"})
+     * @ORM\JoinTable(name="post_tags")
+     */
+    protected $tags;
+
+    public function __construct() {
+        $this->tags = new ArrayCollection();
+    }
 
     /**
      * @return int
@@ -51,6 +62,17 @@ class Post
     public function setTitle($title)
     {
         $this->title = $title;
+    }
+
+    public function addTag(Tag $tag)
+    {
+        $tag->addPost($this);
+        $this->tags[] = $tag;
+    }
+
+    public function getTags()
+    {
+        return $this->tags;
     }
 
 }
