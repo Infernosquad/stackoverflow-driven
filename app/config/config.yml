@@ -53,6 +53,10 @@ doctrine:
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
+        filters:
+            user_filter:
+                class:   AppBundle\Filter\UserFilter
+                enabled: false
 
 # Swiftmailer Configuration
 swiftmailer:
