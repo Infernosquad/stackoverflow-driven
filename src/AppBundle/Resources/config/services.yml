@@ -10,3 +10,8 @@ services:
         calls:
             - [ setTranslationDomain, [AppBundle]]
 
+    app.exception_listener:
+      class: AppBundle\Listener\AppExceptionListener
+      arguments: [@logger]
+      tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
