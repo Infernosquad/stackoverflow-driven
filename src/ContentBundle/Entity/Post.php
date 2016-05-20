@@ -70,6 +70,13 @@ class Post
         $this->tags[] = $tag;
     }
 
+    public function removeTag(Tag $tag)
+    {
+        if($this->tags->contains($tag)){
+            $this->tags->remove($tag);
+        }
+    }
+
     public function getTags()
     {
         return $this->tags;

@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         {% block stylesheets %}{% endblock %}
         <link rel="stylesheet" href="{{ asset('/bundles/app/css/main.css') }}">
+        <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
         {% block javascripts %}{% endblock %}
     </head>
     <body>
@@ -23,6 +24,16 @@
                                 <a href="{{ path('sonata_admin_dashboard') }}">Admin</a>
                             </li>
                         {% endif %}
+                        <li>
+                            <a href="{{ path('content_post_create') }}">
+                                Create Post
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('content_post_list') }}">
+                                Post List
+                            </a>
+                        </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>

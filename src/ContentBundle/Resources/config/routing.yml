@@ -1,3 +1,7 @@
-content_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: ContentBundle:Default:index }
+content_post_create:
+    path:     /post/create
+    defaults: { _controller: ContentBundle:Post:create }
+
+content_post_list:
+    path:     /post/list
+    defaults: { _controller: ContentBundle:Post:list }

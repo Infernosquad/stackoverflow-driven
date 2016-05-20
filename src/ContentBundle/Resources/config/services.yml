@@ -9,3 +9,8 @@ services:
             - ~
         calls:
             - [ setTranslationDomain, [AppBundle]]
+
+    content.form.type.post:
+        class: ContentBundle\Form\Type\PostType
+        tags:
+            - { name: form.type, alias: 'content_post' }

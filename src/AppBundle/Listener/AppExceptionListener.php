@@ -2,6 +2,7 @@
 
 namespace AppBundle\Listener;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class AppExceptionListener
 {
@@ -17,7 +18,7 @@ class AppExceptionListener
         // We get the exception object from the received event
         $exception = $event->getException();
 
-        if($exception->getStatusCode() != 404)
+        if(!$exception instanceof NotFoundHttpException)
         {
             $this->logger->info('Error');
         }
