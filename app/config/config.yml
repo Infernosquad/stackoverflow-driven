@@ -68,3 +68,5 @@ swiftmailer:
 
 sensio_framework_extra:
     view:    { annotations: false }
+
+nelmio_api_doc: ~

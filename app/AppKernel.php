@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
             new ContentBundle\ContentBundle(),
             new XmlTestBundle\XmlTestBundle(),
         );
