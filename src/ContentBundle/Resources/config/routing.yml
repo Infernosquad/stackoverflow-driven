@@ -5,3 +5,8 @@ content_post_create:
 content_post_list:
     path:     /post/list
     defaults: { _controller: ContentBundle:Post:list }
+
+posts:
+    type:     rest
+    resource: ContentBundle\Controller\API\PostController
+    prefix: /api/v1
