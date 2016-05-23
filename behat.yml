@@ -1,0 +1,25 @@
+default:
+    formatters:
+        pretty:
+            verbose:  true
+            paths:    false
+            snippets: false
+
+    suites:
+        post:
+            paths:    [ %paths.base%/features/post ]
+            contexts:
+                - Behat\MinkExtension\Context\MinkContext
+                - FeatureContext
+
+    extensions:
+        Behat\MinkExtension:
+            base_url: http://localhost:8000/
+            sessions:
+                default:
+                    symfony2: ~
+                javascript:
+                    selenium2: ~
+            browser_name: firefox
+            show_auto:    false
+        Behat\Symfony2Extension: ~
