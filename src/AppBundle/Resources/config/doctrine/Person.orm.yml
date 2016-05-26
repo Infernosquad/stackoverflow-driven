@@ -1,0 +1,15 @@
+AppBundle\Entity\Person:
+  type: entity
+  inheritanceType: SINGLE_TABLE
+  discriminatorColumn:
+    name: type
+    type: string
+  discriminatorMap:
+    person: Person
+    employee: Employee
+  id:
+      id:
+          type: integer
+          id: true
+          generator:
+              strategy: AUTO

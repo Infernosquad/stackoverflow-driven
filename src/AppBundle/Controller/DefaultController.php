@@ -11,7 +11,9 @@ class DefaultController extends Controller
 {
     public function indexAction(Request $request)
     {
-        $users = $this->getDoctrine()->getRepository('AppBundle:User')->findAll();
+        $users = $this->getDoctrine()->getRepository('AppBundle:Person')->findAll();
+        dump($users);
+        die();
 
         $form = $this->createForm(new UserType(),new User());
 
