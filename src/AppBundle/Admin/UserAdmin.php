@@ -8,9 +8,13 @@ use Sonata\AdminBundle\Form\FormMapper;
 
 class UserAdmin extends Admin
 {
+    protected $translationDomain = 'AppBundle';
+
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper->add('name', 'text');
+        $formMapper->add('createdAt', 'sonata_type_date_picker',[
+        ]);
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)

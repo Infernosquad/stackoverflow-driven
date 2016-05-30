@@ -1,2 +1,4 @@
+app:
+  hello: "Hello"
 validation:
     not_blank: "Not blank custom"

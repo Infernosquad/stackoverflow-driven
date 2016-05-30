@@ -15,3 +15,9 @@ services:
       arguments: [@logger]
       tags:
             - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+
+    app.locale_listener:
+        class: AppBundle\Listener\LocaleListener
+        arguments: ['%kernel.default_locale%']
+        tags:
+            - { name: kernel.event_subscriber }

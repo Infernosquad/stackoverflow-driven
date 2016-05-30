@@ -1,0 +1,4 @@
+app:
+  hello: "Привет"
+validation:
+    not_blank: "Поле не должно быть пустым"
