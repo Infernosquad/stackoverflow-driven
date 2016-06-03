@@ -1,0 +1,14 @@
+#/src/ContentBundle/Resources/config/validation.yml
+ContentBundle\Entity\Post:
+    properties:
+        tags:
+            - Valid: ~
+
+ContentBundle\Entity\Tag:
+    properties:
+        name:
+          - Length:
+              min: 5
+              max: 10
+              minMessage: 'Your tag must be at least {{ limit }} characters long'
+              maxMessage: 'Your tag cannot be longer than {{ limit }} characters'

@@ -71,7 +71,7 @@
 {% endblock %}
 
 {% block body %}
-    {{ form_start(form) }}
+    {{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
     {{ form_row(form.title) }}
 
     <h3>Tags</h3>
