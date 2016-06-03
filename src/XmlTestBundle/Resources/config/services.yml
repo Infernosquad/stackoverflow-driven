@@ -1,0 +1,6 @@
+services:
+    xml_test.admin.comment:
+        class: XmlTestBundle\Admin\CommentAdmin
+        arguments: [~, XmlTestBundle\Entity\Comment, XmlTestBundle:CommentAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Comment}
