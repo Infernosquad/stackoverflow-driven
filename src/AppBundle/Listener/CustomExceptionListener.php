@@ -1,10 +1,11 @@
 <?php
+//src/AppBundle/Listener/CustomExceptionListener.php
 
 namespace AppBundle\Listener;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-class AppExceptionListener
+class CustomExceptionListener
 {
     private $logger;
 
@@ -15,12 +16,11 @@ class AppExceptionListener
 
     public function onKernelException(GetResponseForExceptionEvent $event)
     {
-        // We get the exception object from the received event
         $exception = $event->getException();
 
         if(!$exception instanceof NotFoundHttpException)
         {
-            $this->logger->info('Error');
+            $this->logger->info(sprintf('Error message: %s',$exception->getMessage()));
         }
     }
 

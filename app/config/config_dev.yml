@@ -20,6 +20,13 @@ monolog:
         firephp:
             type:  firephp
             level: info
+#        pushover:
+#            type:  pushover
+#            level: debug
+#            title: "Monolog Message"
+#            user: ""
+#            token: ""
+#            channels: ['custom']
         chromephp:
             type:  chromephp
             level: debug

@@ -1,3 +1,4 @@
+#src/AppBundle/Resources/config/config.yml
 services:
     app.admin.user:
         class: AppBundle\Admin\UserAdmin
@@ -11,10 +12,11 @@ services:
             - [ setTranslationDomain, [AppBundle]]
 
     app.exception_listener:
-      class: AppBundle\Listener\AppExceptionListener
+      class: AppBundle\Listener\CustomExceptionListener
       arguments: [@logger]
       tags:
             - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+            - { name: monolog.logger, channel: custom }
 
     app.locale_listener:
         class: AppBundle\Listener\LocaleListener
