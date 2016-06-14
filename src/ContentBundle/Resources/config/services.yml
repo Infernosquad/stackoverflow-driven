@@ -14,3 +14,9 @@ services:
         class: ContentBundle\Form\Type\PostType
         tags:
             - { name: form.type, alias: 'content_post' }
+
+    content.post.entity_listener:
+        class: ContentBundle\EntityListener\PostListener
+        arguments: [@logger]
+        tags:
+            - { name: doctrine.orm.entity_listener }
