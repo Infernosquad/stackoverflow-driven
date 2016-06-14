@@ -1,6 +1,8 @@
 #/src/ContentBundle/Resources/config/validation.yml
 ContentBundle\Entity\Post:
     properties:
+        title:
+            - NotBlank: ~
         tags:
             - Valid: ~
 
