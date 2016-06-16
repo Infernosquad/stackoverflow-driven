@@ -30,6 +30,11 @@ class User implements UserInterface, \Serializable
      */
     private $createdAt;
 
+    /**
+     * @var array
+     */
+    private $roles;
+
 
     public function __construct()
     {
@@ -104,7 +109,12 @@ class User implements UserInterface, \Serializable
 
     public function getRoles()
     {
-        return array('ROLE_USER');
+        return array_unique($this->roles);
+    }
+
+    public function setRoles($roles)
+    {
+        $this->roles = $roles;
     }
 
     /**

@@ -8,12 +8,6 @@
       "": "src/"
     }
   },
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/Infernosquad/SonataAdminBundle"
-    }
-  ],
   "require": {
     "php": ">=5.3.9",
     "symfony/symfony": "2.8.*",
@@ -29,7 +23,7 @@
     "doctrine/doctrine-fixtures-bundle": "2.2.*",
     "friendsofsymfony/rest-bundle": "^1.6",
     "jms/serializer-bundle": "^0.13.0",
-    "sonata-project/admin-bundle": "2.x",
+    "sonata-project/admin-bundle": "~2.3",
     "sonata-project/doctrine-orm-admin-bundle": "~2.3",
     "hwi/oauth-bundle": "^0.3.9",
     "symfony/var-dumper": "^3.0",

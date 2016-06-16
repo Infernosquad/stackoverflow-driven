@@ -15,4 +15,6 @@ AppBundle\Entity\User:
          type: string
        createdAt:
          type: datetime
+       roles:
+         type: array
     lifecycleCallbacks: {  }
