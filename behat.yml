@@ -20,6 +20,8 @@ default:
                     symfony2: ~
                 javascript:
                     selenium2: ~
-            browser_name: firefox
+            browser_name: chrome
             show_auto:    false
+            selenium2:
+                  wd_host: "http://127.0.0.1:4444/wd/hub"
         Behat\Symfony2Extension: ~

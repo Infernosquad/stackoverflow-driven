@@ -7,11 +7,6 @@ use Behat\Symfony2Extension\Context\KernelAwareContext;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 
-/**
- *
- * @author Athlan
- *
- */
 abstract class DefaultContext extends RawMinkContext implements Context, KernelAwareContext
 {
     /**
