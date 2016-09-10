@@ -10,6 +10,7 @@
                 <tr>
                     <th>Title</th>
                     <th>Tags</th>
+                    <th>Comments</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -22,6 +23,7 @@
                                 {{ tag.name }}|
                             {% endfor %}
                         </td>
+                        <td>{{ post.comments.count }}</td>
                         <td><a href="#">Edit</a></td>
                     </tr>
                 {% endfor %}

@@ -2,6 +2,7 @@
 namespace AppBundle\DataFixtures\ORM;
 
 use AppBundle\Entity\User;
+use ContentBundle\Entity\Comment;
 use ContentBundle\Entity\Post;
 use ContentBundle\Entity\Tag;
 use Doctrine\Common\DataFixtures\FixtureInterface;
@@ -14,11 +15,13 @@ class LoadPostData implements FixtureInterface {
      */
     public function load(ObjectManager $manager)
     {
+        $comment = new Comment();
         $tag1 = new Tag('tag1');
         $post1 = new Post();
         $post1->setTitle('Post 1');
         $post1->addTag($tag1);
         $post1->addTag(new Tag('tag2'));
+        $post1->addComment($comment);
 
         $post2 = new Post();
         $post2->setTitle('Post 2');

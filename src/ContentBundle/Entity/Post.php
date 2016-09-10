@@ -24,13 +24,19 @@ class Post
     protected $title;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Tag",inversedBy="tags",cascade={"persist", "remove"})
+     * @ORM\ManyToMany(targetEntity="Tag",inversedBy="posts",cascade={"persist", "remove"})
      * @ORM\JoinTable(name="post_tags")
      */
     protected $tags;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Comment", mappedBy="post",fetch="EXTRA_LAZY",cascade={"persist", "remove"})
+     */
+    private $comments;
+
     public function __construct() {
-        $this->tags = new ArrayCollection();
+        $this->tags     = new ArrayCollection();
+        $this->comments = new ArrayCollection();
     }
 
     /**
@@ -81,6 +87,28 @@ class Post
     public function getTags()
     {
         return $this->tags;
+    }
+
+    public function addComment(Comment $comment)
+    {
+        $this->comments[] = $comment;
+        $comment->setPost($this);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    /**
+     * @param mixed $comments
+     */
+    public function setComments($comments)
+    {
+        $this->comments = $comments;
     }
 
 }
