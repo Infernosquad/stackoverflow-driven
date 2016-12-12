@@ -23,3 +23,9 @@ services:
         arguments: ['%kernel.default_locale%']
         tags:
             - { name: kernel.event_subscriber }
+
+#    app.exception_normalizer:
+#        class: AppBundle\Serializer\Normalizer\ExceptionNormalizer
+#        arguments: ["@fos_rest.exception.messages_map", false]
+#        tags:
+#            - { name: jms_serializer.subscribing_handler }

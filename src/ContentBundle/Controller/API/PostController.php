@@ -10,6 +10,7 @@ use FOS\RestBundle\Request\ParamFetcher;
 use FOS\RestBundle\Util\Codes;
 use FOS\RestBundle\View\View;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class PostController extends FOSRestController
 {
@@ -18,7 +19,8 @@ class PostController extends FOSRestController
      */
     public function getPostsAction(ParamFetcher $paramFetcher)
     {
-        $sort = $paramFetcher->get('sort');
+        throw new NotFoundHttpException();
+        return [];
     }
 
     public function putPostAction(Post $post, Request $request)
